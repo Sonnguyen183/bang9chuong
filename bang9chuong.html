@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bảng Cửu Chương</h1>
+<p id="tro"></p>
+<script>
+    let bang= "<table border='1' width='1000' cellSpacing='2' cellPadding='2'>";
+    let i,j=0;
+    for (i = 1; i <= 9; i++) {
+        bang+="<tr>";
+        for (j = 1; j <= 8; j++) {
+            bang+="<td>"+(j+1)+"x"+i+"="+eval((j+1)*i)+"</td>";
+        }
+        bang+="<tr>";
+    }
+    bang+="</table>";
+    document.getElementById("tro").innerHTML=bang;
+</script>
+</body>
+</html>
